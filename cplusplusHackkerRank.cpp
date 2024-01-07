@@ -5,6 +5,31 @@
 #include <algorithm>
 using namespace std;
 
+//24.01.07.
+int Day2Task2(int a, int b, int c, int d) {
+    if (a > b && a > c && a > d) return a;
+    if (b > a && b > c && b > d) return b;
+    if (c > b && c > a && c > d) return c;
+    if (d > b && d > c && d > a) return d;
+    else return 0;
+}
+
+void Day2Task1(int min, int max) {
+    for (int i = min; i <= max; i++) {
+    if (i == 1) cout << "one\n";
+    else if (i == 2) cout << "two\n";
+    else if (i == 3) cout << "three\n";
+    else if (i == 4) cout << "four\n";
+    else if (i == 5) cout << "five\n";
+    else if (i == 6) cout << "six\n";
+    else if (i == 7) cout << "seven\n";
+    else if (i == 8) cout << "eight\n";
+    else if (i == 9) cout << "nine\n";
+    else if (i > 9 && i % 2 == 1) cout << "odd\n";
+    else if (i > 9 && i % 2 == 0) cout << "even\n";
+    }
+}
+
 //24.01.06.
 void Day1Task3(int n) {
     //start of my task
@@ -58,9 +83,17 @@ void Day1Task1() {
 }
 
 int main() {
+    cout << "hi\n";
+
+    //24.01.07.
+    cout << Day2Task2(18, 23, 62, 55) << '\n';
+    Day2Task1(7, 15);
+
+    //24.01.06.
     //Day1Task3
     string n_temp;
     getline(cin, n_temp);
+    cout << "OK until stoi";
     int n = stoi(ltrim(rtrim(n_temp)));
     Day1Task3(n);
     //Day1Task1-2
