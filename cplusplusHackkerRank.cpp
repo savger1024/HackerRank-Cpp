@@ -5,6 +5,15 @@
 #include <algorithm>
 using namespace std;
 
+//24.01.08.
+void Day3Task1(int *a, int *b) { //update
+    int temp = *a;
+    *a = *a + *b;
+    if (*b > temp) *b = *b - temp;
+    else *b = temp - *b;
+
+}
+
 //24.01.07.
 int Day2Task2(int a, int b, int c, int d) {
     if (a > b && a > c && a > d) return a;
@@ -84,6 +93,20 @@ void Day1Task1() {
 
 int main() {
     cout << "hi\n";
+
+    //24.01.08.
+    //Day3Task1
+    int aD3T1, bD3T1;
+    int *paD3T1 = &aD3T1, *pbD3T1 = &bD3T1;
+
+    cout << "Write two numbers, one will become the sum, the other the absolute difference\n";
+    scanf("%d %d", &aD3T1, &bD3T1);
+    
+    Day3Task1(paD3T1,pbD3T1); //update
+    printf("%d\n%d\n", aD3T1, bD3T1);
+
+
+
 
     //24.01.07.
     cout << Day2Task2(18, 23, 62, 55) << '\n';
